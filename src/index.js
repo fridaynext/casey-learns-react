@@ -1,17 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
 
+let city = "Luxembourg"
+let fancyCity = {
+  name: "Luxembourg",
+  country: "Somewhere near France"
+}
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+  <ul>
+    <li className="cool-text">Hot Dogs</li>
+    <li>Hamburgers</li>
+    <li>Pizza</li>
+    <li>Chips</li>
+    <li id="heading">{city}, {fancyCity.country}</li>
+  </ul>,
+  document.getElementById("root")
+)
